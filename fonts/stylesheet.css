@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Oswald";
+    src: url("Oswald/Oswald-Regular.ttf")
+      format("ttf supports variations"), url("Oswald/Oswald-VariableFont_wght.ttf")
+      format("ttf-variations");
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("RobotoCondensed/RobotoCondensed-Regular.ttf")
+      format("ttf supports variations"), url("RobotoCondensed/RobotoCondensed-VariableFont_wght.ttf")
+      format("ttf-variations");
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("RobotoCondensed/RobotoCondensed-Italic.ttf")
+      format("ttf supports variations"), url("RobotoCondensed/RobotoCondensed-Italic-VariableFont_wght.ttf")
+      format("ttf-variations");
+    font-display: swap;
+    font-weight: 100 900;
+    font-style: italic;
+}
