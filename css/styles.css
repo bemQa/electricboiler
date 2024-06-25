@@ -341,8 +341,8 @@ body .adaptive-visible {
 /*main styles*/
 body {
     margin: 0;
-    color: #252525;
-    font: normal 16rem/normal 'NunitoSans', sans-serif;
+    color: #040201;
+    font: normal 16rem/normal 'Roboto Condensed', sans-serif;
 }
 
 .wrapper {
@@ -360,10 +360,10 @@ body {
 
 .container {
     position: relative;
-    max-width: 1440rem;
+    max-width: 1350rem;
     width: 100%;
     margin: 0 auto;
-    padding: 0 40rem;
+    padding: 0 20rem;
 }
 
 .header {
@@ -371,7 +371,7 @@ body {
     align-items: center;
     position: fixed;
     width: 100%;
-    height: 90rem;
+    height: 92rem;
     margin: auto;
     background: #fff;
     z-index: 10;
@@ -382,50 +382,34 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1440rem;
+    max-width: 1350rem;
     width: 100%;
     margin: 0 auto;
-    padding: 0 40rem;
+    padding: 0 20rem;
     z-index: 11;
 }
 
 .logo {
     position: relative;
     display: block;
-    max-width: 82rem;
+    max-width: 150rem;
     width: 100%;
     line-height: 0;
     z-index: 11;
-}
-
-.blind-link {
-    width: 147rem;
-    margin-left: 40rem;
-    line-height: 0;
 }
 
 .header-buttons {
     position: relative;
     display: flex;
     margin-left: auto;
+    gap: 0 10rem;
     z-index: 11;
-}
-
-.header-buttons * {
-    margin-left: 16rem;
 }
 
 .buttons {
     display: flex;
     flex-wrap: wrap;
-}
-
-.buttons * {
-    margin-top: 10rem;
-}
-
-.buttons *:not(:first-child) {
-    margin-left: 10rem;
+    gap: 10rem;
 }
 
 .btn {
@@ -435,102 +419,28 @@ body {
     justify-content: center;
     width: fit-content;
     height: auto;
-    padding: 20rem 36rem;
-    background: #1066F6 !important;
-    border-radius: 60rem;
+    padding: 14rem 20rem;
+    background: #D24A43;
+    border-radius: 5rem;
+    font-family: Oswald;
     font-weight: 600;
-    font-size: 18rem;
+    font-size: 16rem;
     line-height: normal;
     text-align: center;
-    color: #fff !important;
+    text-transform: uppercase;
+    color: #fff;
     transition: all .2s linear;
-}
-
-.btn.white {
-    background: #fff !important;
-    color: #1066F6 !important;
-}
-
-.btn.white-blue {
-    background: #fff !important;
-    color: #1066F6 !important;
-}
-
-.btn.lightgray {
-    background: #F5F5F5 !important;
-    color: #252525 !important;
 }
 
 .btn:hover {
     opacity: 0.8;
 }
 
-.btn.white-blue:hover {
-    background: #1066F6 !important;
-    color: #fff !important;
-}
-
-.inv-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    padding: 20rem 36rem;
-    background: #F2F2F2 !important;
-    border-radius: 60rem;
-    font-weight: 600;
-    font-size: 18rem;
-    line-height: normal;
-    text-align: center;
-    color: #252525 !important;
-    transition: all .2s linear;
-}
-
-.header.active .inv-btn {
-    background: transparent !important;
-    color: #fff !important;
-}
-
-.inv-btn:hover {
-    opacity: 0.8;
-}
-
-.btn-nav {
-    position: relative;
-    padding-right: 52rem;
-}
-
-.btn-nav::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 36rem;
-    bottom: 0;
-    margin: auto;
-    width: 7rem;
-    height: 13rem;
-    background: url(../img/icons/arrow-right-white.svg) center/contain no-repeat;
-}
-
-.btn-nav.white::after {
-    background: url(../img/icons/arrow-right-blue.svg) center/contain no-repeat;
-}
-
-.btn-nav.white-blue::after {
-    background: url(../img/icons/arrow-right-white.svg) center/contain no-repeat;
-}
-
-.btn-nav.lightgray::after {
-    background: url(../img/icons/arrow-right.svg) center/contain no-repeat;
-}
-
 .menu {
     position: relative;
     display: block;
     width: 30rem;
-    height: 20rem;
+    height: 30rem;
     margin-left: 20rem;
     background-color: transparent;
     font-size: 0;
@@ -546,8 +456,8 @@ body {
     bottom: 0;
     margin: auto;
     width: 100%;
-    height: 4rem;
-    background: #1066F6 !important;
+    height: 2rem;
+    background: #424242;
     border-radius: 4rem;
     transition: background 0s .3s;
 }
@@ -563,8 +473,8 @@ body {
     bottom: 0;
     margin: auto;
     width: 100%;
-    height: 4rem;
-    background: #1066F6 !important;
+    height: 2rem;
+    background: #424242;
     border-radius: 4rem;
     transition-duration: 0.3s, 0.3s;
     transition-delay: 0.3s, 0s;
@@ -612,25 +522,11 @@ body {
     min-height: 100vh;
     height: fit-content;
     padding: 58rem 20rem 20rem;
-    background: #fff;
+    background: #2A547E;
     z-index: 10;
     opacity: 0;
     pointer-events: none;
     transition: all .2s linear;
-}
-
-.menu-links-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    background: url(../img/bg.png), lightgray 50%/cover no-repeat;
-    opacity: 0.3;
 }
 
 .header.active .menu-links-wrapper {
@@ -728,36 +624,6 @@ body {
     margin-left: 0;
 }
 
-.dop-menu-wrapper {
-    position: relative;
-    padding: 20rem 0;
-    margin-top: 40rem;
-}
-
-.dop-menu-wrapper + .dop-menu-wrapper {
-    margin-top: 0;
-}
-
-.dop-menu-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -500rem;
-    right: -500rem;
-    margin: auto;
-    width: 1000rem;
-    height: 1rem;
-    background: rgba(59, 59, 59, 0.25);
-}
-
-.dop-menu-title {
-    margin-bottom: 12rem;
-    font-weight: 600;
-    font-size: 16rem;
-    text-align: center;
-    color: #252525;
-}
-
 .dop-menu-phone {
     position: relative;
     padding-left: 44rem;
@@ -777,44 +643,15 @@ body {
     opacity: 0.5;
 }
 
-.menu-links-socs {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.menu-links-soc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30rem;
-    height: 30rem;
-    margin-top: 10rem;
-    opacity: 0.5;
-}
-
-.menu-links-soc:not(:last-child) {
-    margin-right: 20rem;
-}
-
-.menu-links-soc:hover {
-    opacity: 0.4;
-}
-
 .footer {
     position: relative;
 }
 
 .footer-container {
-    max-width: 1440rem;
+    max-width: 1350rem;
     width: 100%;
     margin: 0 auto;
-    padding: 0 40rem;
-}
-
-.footer-separate {
-    width: 100%;
-    height: 1rem;
-    background: rgba(59, 59, 59, 0.25);
+    padding: 0 20rem;
 }
 
 .footer-menus {
