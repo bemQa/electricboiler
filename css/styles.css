@@ -1044,12 +1044,7 @@ a.mainpage-catalog-category-param:hover {
     width: 100%;
     height: 100%;
     background: rgb(19 26 40 / 70%);
-    opacity: 0;
     transition: all .3s ease;
-}
-
-.galery-img-more:hover::after {
-    opacity: 1;
 }
 
 .galery-img-more-text {
@@ -1071,11 +1066,6 @@ a.mainpage-catalog-category-param:hover {
     border-radius: 5rem;
     z-index: 1;
     transition: all .3s ease;
-    opacity: 0;
-}
-
-.galery-img-more:hover .galery-img-more-text {
-    opacity: 1;
 }
 
 .steps {
