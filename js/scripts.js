@@ -74,4 +74,27 @@ $(document).ready(function() {
     }
     openAccordion();
 
+    let galery_slider = $('.galery-slider');
+    if(galery_slider.length){
+        galery_slider.owlCarousel({
+            center: false,
+            items: 4,
+            loop: false,
+            nav: true,
+            dots: false,
+            margin: 10,
+            mouseDrag: false,
+            touchDrag: true,
+            navSpeed: 1300,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                481: {
+                    items: 4,
+                }
+            }
+        });
+    }
+
 });
