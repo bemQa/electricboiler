@@ -8,6 +8,7 @@ $(document).ready(function() {
 	// анимация меню
 	$('.menu').click(function(e){
         e.preventDefault();
+        (this.parentElement.classList.contains('active') === true) ? this.parentElement.classList.remove('active') : this.parentElement.classList.add('active');
         (this.classList.contains('active') === true) ? this.classList.remove('active') : this.classList.add('active');
 
         $('.header').toggleClass('active');
@@ -74,6 +75,7 @@ $(document).ready(function() {
     }
     openAccordion();
 
+    // слайдеры
     let galery_slider = $('.galery-slider');
     if(galery_slider.length){
         galery_slider.owlCarousel({
@@ -94,6 +96,25 @@ $(document).ready(function() {
                     items: 4,
                 }
             }
+        });
+    }
+
+    // открытие модалок
+    $('body').on('click','.js-open-modal', function(e){
+        e.preventDefault();
+        let id = $(this).attr('href');
+        $.fancybox.open({
+            src: id,
+            type: 'inline',
+			touch: false
+        });
+    });
+
+    // маски
+    if ($('.phone-mask').length) {
+        $('.phone-mask').inputmask({
+            mask: "+79999999999",
+            "clearIncomplete": true
         });
     }
 

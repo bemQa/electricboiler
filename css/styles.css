@@ -301,7 +301,7 @@ body {
 
 /* browser scroll width */
 ::-webkit-scrollbar {
-    width: 6rem;
+    width: 10rem;
     height: 4rem;
 }
 
@@ -312,7 +312,7 @@ body {
 
 /* browser scroll handle */
 ::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: #666666;
     border-radius: 3rem;
 }
 
@@ -440,12 +440,25 @@ body {
     font-size: 20rem;
 }
 
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70rem;
+    height: 70rem;
+    margin-left: 16rem;
+    border-left: 1rem solid #DADADA;
+}
+
+.menu-button.active {
+    background: #2A547E;
+}
+
 .menu {
     position: relative;
     display: block;
-    width: 30rem;
-    height: 30rem;
-    margin-left: 20rem;
+    width: 25rem;
+    height: 20rem;
     background-color: transparent;
     font-size: 0;
     text-indent: -999rem;
@@ -462,7 +475,6 @@ body {
     width: 100%;
     height: 2rem;
     background: #424242;
-    border-radius: 4rem;
     transition: background 0s .3s;
 }
 
@@ -479,7 +491,6 @@ body {
     width: 100%;
     height: 2rem;
     background: #424242;
-    border-radius: 4rem;
     transition-duration: 0.3s, 0.3s;
     transition-delay: 0.3s, 0s;
 }
@@ -506,6 +517,7 @@ body {
 
 .menu.active::before,
 .menu.active::after {
+    background: #fff;
     transition-delay: 0s, 0.3s;
 }
 
@@ -518,14 +530,15 @@ body {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 0;
+    gap: 20rem;
+    top: 70rem;
     left: 0;
     right: 0;
     margin: auto;
     width: 100%;
     min-height: 100vh;
     height: fit-content;
-    padding: 58rem 20rem 20rem;
+    padding: 50rem 20rem 50rem;
     background: #2A547E;
     z-index: 10;
     opacity: 0;
@@ -1414,7 +1427,7 @@ textarea.input-text {
     height: 100%;
     padding: 0;
     background: transparent;
-    border-radius: 40rem;
+    border-radius: 5rem;
 }
 
 .modal_content {
@@ -1422,21 +1435,67 @@ textarea.input-text {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 810rem;
+    max-width: 600rem;
     width: 100%;
     margin: 0 auto;
+    padding: 30rem 40rem;
+    background: #F5F5F5;
+    border-radius: 5rem;
 }
 
 .modal .fancybox-close-small {
-    top: 10rem;
-    right: 10rem;
-    width: 44rem;
-    height: 44rem;
-    padding: 4rem;
+    top: -25rem;
+    right: -25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    height: 50rem;
+    padding: 0;
+    background: #2A547E;
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+.modal .fancybox-close-small svg {
+    width: 35rem;
+    height: 35rem;
+}
+
+.modal .fancybox-close-small svg path {
+    fill: #fff;
+}
+
+.modal .fancybox-close-small:hover {
+    transform: scale(.95);
 }
 
 .modal_content + .fancybox-close-small {
     display: none;
+}
+
+.modal-title {
+    margin-bottom: 10rem;
+    font-weight: 700;
+    font-size: 36rem;
+    line-height: normal;
+}
+
+.modal-text {
+    font-size: 20rem;
+    line-height: 1.5;
+}
+
+.modal .form {
+    margin-top: 20rem;
+}
+
+.modal .btn {
+    width: 100%;
+}
+
+.modal-success {
+    text-align: center;
 }
 
 /*end main styles*/
@@ -1456,95 +1515,72 @@ textarea.input-text {
     }
 
     .header {
-        height: 58rem;
+        height: 70rem;
+        box-shadow: 0rem 4rem 10rem 0rem rgb(0 0 0 / 10%);
     }
 
     .header-container,
     .container,
     .footer-container {
-        padding: 0 20rem;
+        padding: 0 15rem;
+    }
+
+    .header-container {
+        padding-right: 0;
     }
 
     .logo {
-        max-width: 56rem;
+        max-width: 120rem;
     }
 
-    .blind-link {
-        width: 125rem;
-        margin-left: 20rem;
-        margin-right: auto;
-    }
-
-    .header-buttons {
+    .header-buttons.mobile-visible {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin: 40rem auto 0;
+        margin: 0 auto;
     }
 
     .btn {
-        padding: 16rem 32rem;
         font-size: 16rem;
     }
 
-    .btn-nav {
-        padding-right: 52rem;
+    .btn-big {
+        font-size: 16rem;
     }
 
-    .header-buttons .btn, 
-    .header-buttons .inv-btn {
-        width: fit-content;
-        margin: auto;
-        font-size: 18rem;
+    .menu-button.mobile-visible {
+        display: flex;
     }
 
     .footer-menus {
         flex-direction: column;
-        padding-top: 60rem;
-        padding-bottom: 40rem;
+        padding-top: 20rem;
+        padding-bottom: 50rem;
     }
 
-    .footer-menu-col:not(:last-child) {
-        margin-bottom: 30rem;
+    .footer-logo {
+        max-width: 170rem;
     }
 
-    .footer-menu-phone {
-        padding-left: 44rem;
-        font-size: 24rem;
+    .footer-goal {
+        font-size: 16rem;
     }
 
-    .footer-menu-phone::before {
-        width: 24rem;
-        height: 24rem;
-    }
-
-    .footer-menu-soc {
-        width: 28rem;
-        height: 28rem;
-    }
-
-    .footer-menu-soc:not(:last-child) {
-        margin-right: 16rem;
+    .footer-container-copyright {
+        padding: 0;
     }
 
     .footer-copyrights {
-        padding-top: 20rem;
-        padding-bottom: 20rem;
+        padding: 20rem 0;
     }
 
     .footer-copyright {
-        font-size: 12rem;
-    }
-
-    .footer-copyright-text:not(:last-child) {
-        margin-bottom: 6rem;
-    }
-
-    .footer-separate {
-        /* width: calc(100% - 40rem); */
-        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20rem;
+        line-height: 1.5;
     }
 
     h1,
@@ -1565,6 +1601,11 @@ textarea.input-text {
     h4,
     .h4 {
         font-size: 20rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 18rem;
     }
 
     .page-subtitle {
@@ -1591,23 +1632,7 @@ textarea.input-text {
     }
 
     .section {
-        padding: 60rem 0;
-    }
-
-    .section-big-padding {
-        padding: 60rem 0;
-    }
-
-    .section-not-padding {
-        padding: 0;
-    }
-
-    .section-not-padding-top {
-        padding-top: 0;
-    }
-    
-    .section-not-padding-bottom {
-        padding-bottom: 0;
+        padding: 30rem 0;
     }
 }
 
