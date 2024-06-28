@@ -1319,6 +1319,136 @@ a.mainpage-catalog-category-param:hover {
     background: url(../img/icons/mail.svg) center/contain no-repeat;
 }
 
+/* forms */
+.form-wrapper {
+    padding: 30rem 40rem;
+    background: #F5F5F5;
+    border-radius: 5rem;
+}
+
+.form-title {
+    font-size: 36rem;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20rem;
+    margin-top: 20rem;
+}
+
+.form-horizontal {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.ip-cell {
+    position: relative;
+    width: 100%;
+}
+
+.form-horizontal .ip-cell {
+    max-width: 450rem;
+}
+
+.input-text {
+    font-weight: 400;
+    font-size: 20rem;
+    line-height: 1;
+    width: 100%;
+    height: 70rem;
+    padding: 20rem;
+    background: #fff;
+    border: 1rem solid transparent;
+    border-radius: 5rem;
+    transition: all 0.3s ease;
+}
+
+.has-error .input-text,
+.input-text.error {
+    border-color: #D24A43;
+}
+
+textarea.input-text {
+    height: 100rem;
+    padding-top: 25rem;
+}
+
+.input-text:hover {
+    border-color: rgb(0 0 0 / 10%);
+}
+
+.input-text:focus {
+    border-color: rgb(0 0 0 / 20%);
+}
+
+.ip-cell span.error {
+    display: none !important;
+}
+
+.help-block {
+    display: none;
+    position: relative;
+    margin-top: 4rem;
+    font-size: 12rem;
+    line-height: 1.3;
+    color: #D24A43;
+}
+
+.has-error .help-block {
+    display: block;
+}
+
+.form-horizontal .btn {
+    height: 70rem;
+}
+
+.ip-cell-text {
+    margin-top: 20rem;
+    font-size: 16rem;
+    line-height: normal;
+    color: #4D4D4D;
+}
+
+/* end forms */
+
+.modal {
+    display: none;
+}
+
+.modal.fancybox-content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: transparent;
+    border-radius: 40rem;
+}
+
+.modal_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 810rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modal .fancybox-close-small {
+    top: 10rem;
+    right: 10rem;
+    width: 44rem;
+    height: 44rem;
+    padding: 4rem;
+}
+
+.modal_content + .fancybox-close-small {
+    display: none;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/
