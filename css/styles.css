@@ -1539,6 +1539,37 @@ textarea.input-text {
     text-align: center;
 }
 
+.section-breadcrumbs {
+    padding: 20rem 0;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem 20rem;
+}
+
+.breadcrumb {
+    position: relative;
+    font-weight: 500;
+    font-size: 14rem;
+    line-height: normal;
+    color: #2A547E
+}
+
+span.breadcrumb {
+    color: #999999;
+}
+
+.breadcrumb:not(:first-child)::before {
+    content: '—';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -15rem;
+    color: #999999;
+}
+
 .contacts-galery {
     position: relative;
     margin-top: 60rem;
