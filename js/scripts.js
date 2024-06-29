@@ -91,6 +91,7 @@ $(document).ready(function() {
             responsive: {
                 0: {
                     items: 2,
+                    margin: 10,
                 },
                 481: {
                     items: 4,
