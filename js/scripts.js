@@ -84,7 +84,7 @@ $(document).ready(function() {
             loop: false,
             nav: true,
             dots: false,
-            margin: 10,
+            margin: 30,
             mouseDrag: false,
             touchDrag: true,
             navSpeed: 1300,

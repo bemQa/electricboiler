@@ -572,6 +572,10 @@ body {
     color: #fff;
 }
 
+.menu-links-wrapper .menu-link.active {
+    text-decoration: underline;
+}
+
 .menu-links.desktop-mobile-visible {
     margin-left: auto;
 }
@@ -585,6 +589,7 @@ body {
     color: #040201;
 }
 
+.menu-links.desktop-mobile-visible .menu-link.active,
 .menu-links.desktop-mobile-visible .menu-link:hover {
     color: #D24A43;
 }
@@ -1021,11 +1026,14 @@ a.mainpage-catalog-category-param:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 320rem;
-    min-width: 305rem;
+    width: 305rem;
     height: 400rem;
     border-radius: 5rem;
     overflow: hidden;
+}
+
+.galery-hidden-img {
+    display: none;
 }
 
 .galery-img img {
@@ -1181,6 +1189,7 @@ a.mainpage-catalog-category-param:hover {
 	width: 30rem;
     height: 30rem;
     padding: 0 !important;
+    transition: all .3s ease;
 }
 
 .partners .owl-nav button:hover {
@@ -1530,6 +1539,52 @@ textarea.input-text {
     text-align: center;
 }
 
+.contacts-galery {
+    position: relative;
+    margin-top: 60rem;
+}
+
+.galery-slider {
+    margin-top: 30rem;
+}
+
+.galery-slider .owl-nav {
+    position: absolute;
+    top: -60rem;
+    right: 0;
+    margin: 0;
+}
+
+.galery-slider .owl-nav button {
+    margin: 0 !important;
+	width: 50rem;
+    height: 50rem;
+    padding: 0 !important;
+    transition: all .3s ease;
+}
+
+.galery-slider .owl-nav button:hover {
+    opacity: 0.8;
+}
+
+.galery-slider .owl-nav button.owl-prev {
+	left: -30rem;
+	background: url(../img/icons/arrow-left.svg) center/13rem no-repeat #F3F9FF !important;
+}
+
+.galery-slider .owl-nav button.owl-next {
+	right: -30rem;
+	background: url(../img/icons/arrow-right.svg) center/13rem no-repeat #F3F9FF !important;
+}
+
+.galery-slider .owl-nav button span {
+	display: none;
+}
+
+.galery-slider .owl-nav .disabled {
+	opacity: 0.3 !important;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/
@@ -1770,7 +1825,6 @@ textarea.input-text {
 
     .galery-img {
         width: calc(50% - 5rem);
-        min-width: auto;
         height: 276rem;
     }
 
@@ -1976,6 +2030,31 @@ textarea.input-text {
 
     .modal-text {
         font-size: 16rem;
+    }
+
+    .galery-slider {
+        margin-top: 20rem;
+    }
+
+    .galery-slider .galery-img {
+        width: 100%;
+    }
+
+    .galery-slider .owl-nav {
+        position: relative;
+        top: auto;
+        margin-top: 10rem;
+    }
+
+    .galery-slider .owl-nav button {
+        margin: 0 5rem !important;
+        width: 30rem;
+        height: 30rem;
+    }
+    
+    .galery-slider .owl-nav button.owl-prev,
+    .galery-slider .owl-nav button.owl-next {
+        background-size: 10rem !important;
     }
 }
 
