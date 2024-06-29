@@ -99,6 +99,29 @@ $(document).ready(function() {
         });
     }
 
+    let partners_slider = $('.partners');
+    if(partners_slider.length && $(window).innerWidth() <= 480){
+        partners_slider.owlCarousel({
+            center: false,
+            items: 4,
+            loop: false,
+            nav: true,
+            dots: false,
+            margin: 10,
+            mouseDrag: false,
+            touchDrag: true,
+            navSpeed: 1300,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                481: {
+                    items: 4,
+                }
+            }
+        });
+    }
+
     // открытие модалок
     $('body').on('click','.js-open-modal', function(e){
         e.preventDefault();
