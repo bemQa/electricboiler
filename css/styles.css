@@ -1557,6 +1557,10 @@ textarea.input-text {
     color: #2A547E
 }
 
+a.breadcrumb:hover {
+    opacity: 0.8;
+}
+
 span.breadcrumb {
     color: #999999;
 }
@@ -1568,6 +1572,11 @@ span.breadcrumb {
     bottom: 0;
     left: -15rem;
     color: #999999;
+}
+
+.section-inner-page {
+    padding-top: 50rem;
+    padding-bottom: 0;
 }
 
 .contacts-galery {
@@ -1614,6 +1623,59 @@ span.breadcrumb {
 
 .galery-slider .owl-nav .disabled {
 	opacity: 0.3 !important;
+}
+
+.section-text-page .page-text {
+    margin-top: 30rem;
+}
+
+.page-text p {
+    margin: 10rem 0;
+}
+
+.files-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem 20rem;
+    width: 100%;
+    margin: 30rem 0;
+    padding: 10rem;
+    background: #F5F5F5;
+    border-radius: 10rem;
+}
+
+.file {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50rem;
+    padding: 10rem 10rem 10rem 42rem;
+    background: #fff;
+    border-radius: 5rem;
+    font-size: 20rem;
+    line-height: normal;
+    color: #040201;
+}
+
+.file::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    bottom: 0;
+    margin: auto;
+    width: 23rem;
+    height: 30rem;
+    background: url(../img/icons/pdf.png) center/contain no-repeat;
+}
+
+.file:hover {
+    opacity: 0.8;
+}
+
+.galery-block {
+    margin-top: 30rem;
 }
 
 /*end main styles*/
@@ -2086,6 +2148,35 @@ span.breadcrumb {
     .galery-slider .owl-nav button.owl-prev,
     .galery-slider .owl-nav button.owl-next {
         background-size: 10rem !important;
+    }
+
+    .section-breadcrumbs {
+        padding: 30rem 0 0;
+    }
+
+    .section-inner-page {
+        padding-top: 30rem;
+        padding-bottom: 0;
+    }
+
+    .contacts-galery {
+        margin-top: 30rem;
+    }
+
+    .files-block {
+        gap: 10rem;
+        margin: 20rem 0;
+    }
+
+    .file {
+        min-height: 40rem;
+        padding-left: 34rem;
+        font-size: 16rem;
+    }
+
+    .file::before {
+        width: 16rem;
+        height: 21rem;
     }
 }
 
