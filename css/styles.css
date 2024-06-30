@@ -1991,6 +1991,360 @@ span.breadcrumb {
     display: none;
 }
 
+.product-page-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20rem 100rem;
+}
+
+.product-page-images-sliders {
+    flex-direction: column;
+    width: 400rem;
+}
+
+.product-page-images-slider {
+    border: 1rem solid #D9D9D9;
+    border-radius: 5rem;
+}
+
+.product-page-images-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400rem;
+    height: 450rem;
+}
+
+.product-page-images-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 40rem;
+    object-fit: contain;
+}
+
+.product-page-images-slider-nav {
+    max-width: calc(100% - 80rem);
+    margin: 20rem auto 0;
+}
+
+.product-page-images-slide-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100rem;
+    height: 100rem;
+    border: 1rem solid #D9D9D9;
+    border-radius: 5rem;
+}
+
+.product-page-images-slide-nav img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 10rem;
+    object-fit: contain;
+}
+
+.product-page-images-slider-nav .owl-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: -1;
+}
+
+.product-page-images-slider-nav .owl-nav button {
+    position: absolute;
+    margin: 0 !important;
+	width: 30rem;
+    height: 100rem;
+    padding: 0 !important;
+    transition: all .3s ease;
+}
+
+.product-page-images-slider-nav .owl-nav button:hover {
+    opacity: 0.8;
+}
+
+.product-page-images-slider-nav .owl-nav button.owl-prev {
+	left: -40rem;
+	background: url(../img/icons/arrow-left.svg) center/13rem no-repeat !important;
+}
+
+.product-page-images-slider-nav .owl-nav button.owl-next {
+	right: -40rem;
+	background: url(../img/icons/arrow-right.svg) center/13rem no-repeat !important;
+}
+
+.product-page-images-slider-nav .owl-nav button span {
+	display: none;
+}
+
+.product-page-images-slider-nav .owl-nav .disabled {
+	opacity: 0.3 !important;
+}
+
+.product-page-product-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 450rem;
+    width: 100%;
+    gap: 20rem 0;
+}
+
+.product-page-product-name {
+    font-weight: 700;
+    font-size: 32rem;
+    line-height: 1.2;
+}
+
+.product-page-product-chars {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rem;
+    gap: 20rem 0;
+    font-size: 16rem;
+    line-height: 1;
+}
+
+.product-page-product-char {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-page-product-char-name,
+.product-page-product-char-text {
+    position: relative;
+    border-bottom: 1rem solid #fff;
+}
+
+.product-page-product-char-name {
+    padding-right: 5rem;
+}
+
+.product-page-product-char-text {
+    padding-left: 5rem;
+}
+
+.product-page-product-char::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 17rem;
+    border-bottom: 1rem solid #D9D9D9;
+}
+
+.product-page-product-params-title {
+    font-size: 16rem;
+    line-height: 1.5;
+}
+
+.product-page-product-params {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    gap: 5rem;
+}
+
+.product-page-product-param {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 10rem;
+    border: 1rem solid #D24A43;
+    border-radius: 5rem;
+    font-size: 16rem;
+    line-height: 1;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.param-big {
+    font-size: 20rem;
+}
+
+.product-page-product-param:hover {
+    background: #D24A43;
+    color: #fff;
+}
+
+.product-page-product-params-chexboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    margin-top: 10rem;
+}
+
+.product-page-product-params-chexboxes .ch + label {
+    display: flex;
+    align-items: center;
+    padding-left: 25rem;
+    font-size: 16rem;
+    line-height: 21rem;
+    color: #040201;
+}
+
+.product-page-product-params-chexboxes .ch + label::before {
+    border: 2rem solid #2A547E;
+}
+
+.product-page-product-params-chexboxes .ch + label::after {
+    background: #2A547E;
+}
+
+.question {
+    position: relative;
+    display: inline-block;
+    width: 20rem;
+    height: 20rem;
+    margin-left: 10rem;
+    background: #2A547E;
+    border-radius: 20rem;
+    font-size: 14rem;
+    line-height: 20rem;
+    text-align: center;
+    color: #fff;
+}
+
+.product-page-price-block {
+    width: 300rem;
+    padding: 20rem;
+    background: #F5F5F5;
+    border-radius: 5rem;
+}
+
+.product-page-price-text {
+    font-weight: 500;
+    font-size: 16rem;
+    line-height: 1.5;
+    color: #605E5D;
+}
+
+.product-page-price {
+    font-family: Oswald;
+    font-weight: 600;
+    font-size: 32rem;
+    line-height: 1.5;
+}
+
+.rub {
+    font-size: 24rem;
+    line-height: 1.5;
+}
+
+.product-page-price-block .btn-big {
+    width: 100%;
+    margin-top: 10rem;
+}
+
+.product-page-info-block {
+    padding: 15rem 20rem;
+    background: #F5F5F5;
+    border-radius: 10rem;
+}
+
+.table {
+    margin: 20rem 0;
+    border-spacing: 0;
+    border: 1rem solid #fff;
+}
+
+.table th,
+.table td {
+    padding: 10rem 20rem;
+    border: 2rem solid #fff;
+    font-weight: 400;
+    font-size: 20rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.table th {
+    background: #fff;
+    color: #605E5D;
+}
+
+.table th:not(:nth-child(1),:nth-child(2)),
+.table td:not(:nth-child(1),:nth-child(2)) {
+    text-align: right;
+}
+
+.table tr:nth-child(even) td {
+    background: #fff;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    max-width: 280rem;
+}
+
+.product-page-info-block-text {
+    padding: 20rem 0;
+}
+
+.product-page-info-block-text-title {
+    margin-bottom: 20rem;
+    font-size: 24rem;
+    line-height: 1.3;
+}
+
+.product-page-info-block-text-text {
+    font-size: 20rem;
+    line-height: 1.5;
+}
+
+.product-page-info-block-text-text p {
+    margin: 10rem 0;
+}
+
+.section-dop-products {
+    padding-bottom: 0;
+}
+
+.dop-title-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.dop-title {
+    max-width: 77%;
+    padding: 8rem 0;
+    font-family: Oswald;
+    font-size: 28rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.dop-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20rem 30rem;
+    margin-top: 20rem;
+}
+
+.dop-products .product {
+    max-width: 305rem;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/

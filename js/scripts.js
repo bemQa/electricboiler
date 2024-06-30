@@ -123,6 +123,34 @@ $(document).ready(function() {
         });
     }
 
+    let product_slider = $('.product-page-images-slider');
+    if(product_slider.length){
+        product_slider.owlCarousel({
+            center: false,
+            items: 1,
+            loop: false,
+            nav: false,
+            dots: false,
+            margin: 10,
+            mouseDrag: false,
+            touchDrag: true,
+            navSpeed: 1300,
+            URLhashListener: true
+        })
+        product_slider.siblings('.product-page-images-slider-nav').owlCarousel({
+            center: false,
+            items: 3,
+            loop: false,
+            nav: true,
+            dots: false,
+            margin: 10,
+            mouseDrag: false,
+            touchDrag: true,
+            navSpeed: 1300,
+            URLhashListener: true
+        })
+    }
+
     // открытие модалок
     $('body').on('click','.js-open-modal', function(e){
         e.preventDefault();
