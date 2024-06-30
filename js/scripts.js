@@ -142,4 +142,15 @@ $(document).ready(function() {
         });
     }
 
+    // мобильные фильтры каталога
+    $('body').on('click', '.btn-filter', function(e) {
+        e.preventDefault();
+        $('.filters').addClass('active');
+    });
+
+    $('body').on('click', '.close-filters, .btn-close-filters', function(e) {
+        e.preventDefault();
+        $('.filters').removeClass('active');
+    });
+
 });

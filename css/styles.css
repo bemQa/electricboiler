@@ -1910,7 +1910,7 @@ span.breadcrumb {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 280rem;
+    width: 100%;
     height: 250rem;
     margin-bottom: 30rem;
 }
@@ -1924,7 +1924,6 @@ span.breadcrumb {
     margin: auto;
     width: 100%;
     height: 100%;
-    padding: 10rem;
     object-fit: contain;
     transition: all .3s ease;
 }
@@ -1983,6 +1982,13 @@ span.breadcrumb {
 
 .seo-text-block p {
     margin: 10rem 0;
+}
+
+.btn-filter,
+.close-filters,
+.filters-title,
+.btn-close-filters {
+    display: none;
 }
 
 /*end main styles*/
@@ -2496,6 +2502,186 @@ span.breadcrumb {
 
     .error-text {
         font-size: 18rem;
+    }
+
+    .catalog-block {
+        flex-direction: column;
+    }
+
+    .products-block {
+        width: 100%;
+    }
+
+    .products-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10rem;
+    }
+
+    .product {
+        padding: 10rem;
+    }
+
+    .product-img {
+        height: 170rem;
+        margin-bottom: 20rem;
+    }
+
+    .product-name {
+        font-size: 16rem;
+    }
+
+    .product-text {
+        margin-top: 10rem;
+        margin-bottom: 20rem;
+        font-size: 14rem;
+        line-height: 1.5;
+    }
+
+    .btn-filter {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 14rem 20rem;
+        background: transparent;
+        border: 1rem solid #D9D9D9;
+        border-radius: 5rem;
+        font-family: Oswald;
+        font-weight: 600;
+        font-size: 16rem;
+        line-height: normal;
+        text-align: center;
+        text-transform: uppercase;
+        color: #040201;
+        transition: all .3s ease;
+    }
+
+    .btn-filter::after {
+        content: '';
+        position: relative;
+        width: 12rem;
+        height: 7rem;
+        margin-left: 5rem;
+        background: url(../img/icons/arrow-down.svg) center/contain no-repeat;
+    }
+
+    .btn-filter:hover {
+        background: #D9D9D9;
+    }
+
+    .filters {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        padding: 30rem 15rem 20rem;
+        gap: 15rem 0;
+        background: #fff;
+        z-index: 15;
+        transition: all .3s ease;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+		scrollbar-width: none;
+    }
+
+    .filters::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    .filters.active {
+        left: 0;
+    }
+
+    .close-filters {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30rem;
+        height: 30rem;
+        padding: 0;
+        background: #2A547E;
+        opacity: 1;
+        transition: all .3s ease;
+    }
+    
+    .close-filters svg {
+        width: 25rem;
+        height: 25rem;
+    }
+    
+    .close-filters svg path {
+        fill: #fff;
+    }
+    
+    .close-filters:hover {
+        transform: scale(.95);
+    }
+
+    .filters-title {
+        display: block;
+        font-weight: 700;
+        font-size: 22rem;
+        line-height: normal;
+    }
+
+    .filter-element-name {
+        padding: 15rem 0;
+        font-size: 16rem;
+    }
+
+    .filter-category {
+        font-size: 16rem;
+    }
+
+    .btn-close-filters {
+        display: flex;
+        width: 100%;
+        margin-top: 15rem;
+    }
+
+    .ch + label,
+    .rd + label {
+        padding-left: 25rem;
+        font-size: 16rem;
+    }
+
+    .ch + label::before,
+    .rd + label::before {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .ch + label::after,
+    .rd + label::after {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .seo-text-block h2 {
+        font-size: 20rem;
+    }
+
+    .seo-text-block h3 {
+        font-size: 18rem;
+    }
+    
+    .seo-text-block h4 {
+        font-size: 16rem;
+    }
+    
+    .seo-text-block h5 {
+        font-size: 14rem;
+    }
+
+    .seo-text-block {
+        font-size: 14rem;
     }
 }
 
