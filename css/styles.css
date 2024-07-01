@@ -447,6 +447,11 @@ body {
     color: #040201;
 }
 
+.btn.disabled,
+.btn[disabled] {
+    background: #D9D9D9;
+}
+
 .menu-button {
     display: flex;
     align-items: center;
@@ -1560,6 +1565,66 @@ textarea.input-text {
 .ch + label a:hover,
 .rd + label a:hover {
     text-decoration: none;
+}
+
+.input-file {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+}
+
+.input-file-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    margin: 0;
+    padding: 10rem 20rem;
+    background-color: #D24A43;
+    border-radius: 5rem;
+    border: none;
+    font-family: Oswald;
+    font-weight: 600;
+    font-size: 16rem;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.input-file-text {
+    width: calc(100% - 170rem);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.input-file input[type=file] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.input-file:hover .input-file-btn {
+    opacity: 0.8;
+}
+
+.input-file:active .input-file-btn {
+    opacity: 0.8;
+}
+
+.input-file input[type=file]:disabled+.input-file-btn {
+    background-color: #D9D9D9;
 }
 
 /* end forms */
@@ -3171,6 +3236,17 @@ span.breadcrumb {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10rem;
+    }
+
+    .input-file-btn {
+        padding: 7rem 10rem;
+        border-radius: 2rem;
+        font-size: 14rem;
+    }
+
+    .input-file-text {
+        width: calc(100% - 140rem);
+        font-size: 14rem;
     }
 }
 
